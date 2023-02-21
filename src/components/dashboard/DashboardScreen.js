@@ -38,18 +38,18 @@ export const DashboardScreen = () => {
                         </div>
                         <div className='card__info'>
                             <p>Balance actual</p>
-                            <h3>{currencyFormatter.format(actualBalance, { code: 'MXN' }) }</h3>
+                            <h3>{currencyFormatter.format(actualBalance, { code: 'MXN' }) } MXN</h3>
                         </div>
                     </div>
                 </div>
-                <div className='col-md-3 col-12 mt-md-0 mt-4'>
+                <div className='col-md-3 col-12 mt-md-0 mt-2'>
                     <div className='card__dashboard'>
                         <div className='card__icon'>
                             <Money />
                         </div>
                         <div className='card__info'>
                             <p>Balance anterior</p>
-                            <h3>{currencyFormatter.format(beforeBalance, { code: 'MXN' }) }</h3>
+                            <h3>{currencyFormatter.format(beforeBalance, { code: 'MXN' }) } MXN</h3>
                         </div>
                     </div>
                 </div>

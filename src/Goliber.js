@@ -9,6 +9,8 @@ import { NewSpendModal } from './components/spend/NewSpendModal';
 import { Loader } from './components/shared/Loader';
 import { authMe } from './helpers/auth-helper';
 import { finishLoading, startLoading } from './actions/ui';
+import { Topbar } from './components/shared/Topbar';
+import { AddRegisterButton } from './components/shared/AddRegisterButton';
 
 export const Goliber = () => {
     
@@ -49,7 +51,9 @@ export const Goliber = () => {
                         <>
                             <NewSpendModal />
                             <Navbar />
-                            <div className='main__container container'>
+                            <Topbar />
+                            <AddRegisterButton />
+                            <div className='main__container container-fluid'>
                                 <PrivateRouter />
                             </div>
                         </>

@@ -1,89 +1,63 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@300;400;500;600;700&display=swap');
 /* Colores */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --black-0: #2B3035;
-    --black-50: #212529;
-    --black-100: #010409;
-    --white-0: white;
-    --white-100: #C1C7CD;
-    --white-200: #C9D1D9;
+:root {
+  --black-0: #C9D1D9;
+  --black-50: #C1C7CD;
+  --black-100: white;
+  --white-0: #010409;
+  --white-100: #212529;
+  --white-200: #2B3035;
 
-    --nav-height: 72px;
-    --purple: #8B5CF6;
-    --primary: #7f0a8e;
-    --primary-hover: #881d96;
-    --error-color: rgb(214, 47, 47);
+  --nav-height: 72px;
+  --purple: #8B5CF6;
 
+ 
+  
 
-  }
+  
+  --primary: #1150A7;
+  --primary-hover: #2C75B5;
+  
+  --primary: #2D3539;
+  --primary-hover: #374044;
 
-  /* Buttons */
-  .button__primary{
-    background-color: var(--primary);
-    color: var(--white-100);
-  }
-  .button__primary:hover{
-    background-color: var(--primary-hover);
-  }
-  .button__secondary{
-    border: 1px solid var(--primary);
-    color: var(--white-100);
-  }
-  .button__secondary:hover{
-    background-color: var(--primary-hover);
-    color: var(--white-100);
-  }
+  --primary: #7f0a8e;
+  --primary-hover: #881d96;
+  
+  --error-color: rgb(214, 47, 47);
+
+  --animate-duration: 300ms;
+  
+
+}
+/* Buttons */
+.button__primary{
+  background-color: var(--primary);
+  color: var(--black-100);
+}
+.button__primary:active{
+  background-color: var(--primary);
+  color: var(--black-100);
+}
+.button__primary:hover{
+  background-color: var(--primary-hover);
+  color: var(--black-100);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --black-0: #C9D1D9;
-    --black-50: #C1C7CD;
-    --black-100: white;
-    --white-0: #010409;
-    --white-100: #212529;
-    --white-200: #2B3035;
-
-    --nav-height: 72px;
-    --purple: #8B5CF6;
-    --primary: #7f0a8e;
-    --primary-hover: #881d96;
-    --error-color: rgb(214, 47, 47);
-
-  }
-
-  /* Buttons */
-  .button__primary{
-    background-color: var(--primary);
-    color: var(--black-100);
-  }
-  .button__primary:active{
-    background-color: var(--primary);
-    color: var(--black-100);
-  }
-  .button__primary:hover{
-    background-color: var(--primary-hover);
-    color: var(--black-100);
-  }
-
-  .button__secondary{
-    border: 1px solid var(--primary);
-    color: var(--white-100);
-  }
-  .button__secondary:active{
-    border: 1px solid var(--primary) !important;
-    color: var(--black-100) !important;
-    background-color: var(--primary-hover) !important;
-    box-shadow: var(--primary) 0px 3px 4px -2px, var(--primary-hover) 0px 0px 0px 1px;
-  }
-  .button__secondary:hover{
-    background-color: var(--primary-hover);
-    color: var(--black-100);
-  }
-
-
+.button__secondary{
+  border: 1px solid var(--primary);
+  color: var(--white-100);
+}
+.button__secondary:active{
+  border: 1px solid var(--primary) !important;
+  color: var(--black-100) !important;
+  background-color: var(--primary-hover) !important;
+  box-shadow: var(--primary) 0px 3px 4px -2px, var(--primary-hover) 0px 0px 0px 1px;
+}
+.button__secondary:hover{
+  background-color: var(--primary-hover);
+  color: var(--black-100);
 }
 
 /* Globales */
@@ -123,6 +97,9 @@ label{
   margin-bottom: 8px;
   user-select: none;
 }
+.btn {
+  height: 50px;
+}
 .no__button{
   background-color: transparent;
   border: none;
@@ -153,54 +130,44 @@ label{
   height: var(--nav-height);
   background-color: var(--black-100);
   position: absolute;
-  box-shadow:  0px -2px 3px var(--black-0);
+  border-top: 2px solid var(--black-0);
   bottom: 0;
   width: 100%;
 }
 .nav__container{
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav__brand{
-  cursor: pointer;
-}
-.nav__actions{
+.nav__option{
+  height: 100%;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.nav__menu{
-  list-style: none;
-  margin: 0;
+.nav__option svg{
+  height: 30px;
+  width: 30px;
 }
-.nav__menu .nav__menu-item{
-  padding: 0;
-  float: left;
-  margin-right: 16px;
-  user-select: none;
+.nav__container .active{
+  border-top: 2px solid var(--primary);
 }
-.nav__menu .nav__menu-item:hover{
-  cursor: pointer;
-  color: var(--white-200);
+.nav__container .active svg{
+  stroke: var(--primary);
 }
-.nav__user-image img{
-  background-color: var(--purple);
-  user-select: none;
-  cursor: pointer;
-}
-.font__brand{
+/* Topbar */
+.topbar{
+  background-color: var(--primary);
+  height: var(--nav-height);
   display: flex;
+  justify-content: center;
   align-items: center;
-  font-family: 'Oswald', sans-serif;
-  user-select: none;
-  margin: 0;
 }
-.nav .navbar__user-menu{
-  position: absolute;
-  background-color: var(--black-50);
-  top: 72px;
-  right: 40px;
+.topbar .font__brand{
+  color: var(--black-0);
 }
 /* Login */
 .google__button{
@@ -214,11 +181,14 @@ label{
   justify-content: center;
 }
 .auth__container{
-  padding: 2rem;
+  padding: 0 1rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(139,92,246, 0.4) 0px 2px 8px 0px;
+}
+.auth__container .auth__wrap{
+  width: 100%;
 }
 .navbar__user-menu .nav__menu{
   padding: 0;
@@ -324,9 +294,8 @@ label{
 /* Card Dashboard */
 .card__dashboard{
   display: flex;
-  padding: 2rem 1.5rem;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 .card__dashboard .card__icon{
   background-color: #57bf2a;
@@ -353,4 +322,15 @@ label{
 }
 .card__dashboard .card__info h3{
   margin: 0;
+}
+/* Register Button */
+.register__button{
+  padding: 5px;
+  position: absolute;
+  bottom: calc(var(--nav-height) + 20px);
+  right: 1rem;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

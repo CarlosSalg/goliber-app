@@ -59,7 +59,8 @@ export const NewSpendModal = () => {
         <Modal 
             show={ spendModal }
             onHide={handleClose}
-            centered
+            fullscreen
+            animation={false}
         >
             <div className='modal__container'>
                 <div className='modal__header'>
@@ -124,9 +125,10 @@ export const NewSpendModal = () => {
                     />
                 }
                 <hr />
+                <button className='btn button__primary w-100' onClick={handleSave}>Guardar</button>
+                <br />
+                <button className='btn button__secondary w-100' style={{ marginRight: '16px' }} onClick={handleClose}>Cancelar</button>
                 <div className='modal__footer'>
-                    <button className='btn button__secondary' style={{ marginRight: '16px' }} onClick={handleClose}>Cancelar</button>
-                    <button className='btn button__primary' onClick={handleSave}>Guardar</button>
                 </div>
             </div>
         </Modal>
