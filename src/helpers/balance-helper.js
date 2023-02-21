@@ -13,3 +13,17 @@ export const getBalance = async ( token ) => {
         return error;
     }
 }
+
+export const newRegister = async ( token, date, amount, income, category, note ) => {
+    try {
+        const { data } = await axios({
+            method: 'post',
+            url: `${API}/balance/register`,
+            headers: {'x-token': token},
+            data: { date, amount, income, category, note },
+        })
+        return data;
+    } catch (error) {
+        return error;
+    }
+}

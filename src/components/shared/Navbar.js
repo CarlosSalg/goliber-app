@@ -3,6 +3,7 @@ import { ReactComponent as Home } from '../icons/home.svg'
 import { ReactComponent as Bars } from '../icons/bars.svg'
 import { ReactComponent as User } from '../icons/user.svg'
 import { ReactComponent as Wallet } from '../icons/wallet.svg'
+import { NavLink } from 'react-router-dom'
 
 
 export const Navbar = () => {
@@ -11,18 +12,18 @@ export const Navbar = () => {
         <nav className="nav">
             <div className="container">
                 <div className='nav__container'>
-                    <div className='nav__option active'>
+                    <NavLink className={({ isActive }) => isActive ? 'nav__option active' : 'nav__option' } to="/">
                         <Home />
-                    </div>
-                    <div className='nav__option'>
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'nav__option active' : 'nav__option' } to="/register">
                         <Wallet />
-                    </div>
-                    <div className='nav__option'>
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'nav__option active' : 'nav__option' } to="/profile">
                         <User />
-                    </div>
-                    <div className='nav__option'>
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'nav__option active' : 'nav__option' } to="/config">
                         <Bars />
-                    </div>
+                    </NavLink>
                 </div>
             </div>
         </nav>

@@ -11,10 +11,6 @@
 
   --nav-height: 72px;
   --purple: #8B5CF6;
-
- 
-  
-
   
   --primary: #1150A7;
   --primary-hover: #2C75B5;
@@ -160,7 +156,9 @@ label{
 }
 /* Topbar */
 .topbar{
-  background-color: var(--primary);
+  background-color: var(--black-100);
+  /* border-bottom: 2px solid var(--black-0); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   height: var(--nav-height);
   display: flex;
   justify-content: center;
@@ -212,7 +210,11 @@ label{
 }
 /* Container */
 .main__container{
-  padding-top: 24px;
+  padding-top: 10px;
+  position: absolute;
+  top: var(--nav-height);
+  bottom: var(--nav-height);
+  overflow-x: scroll;
 }
 /* Modal */
 .modal__container{
@@ -325,6 +327,7 @@ label{
 }
 /* Register Button */
 .register__button{
+  background-color: var(--black-100);
   padding: 5px;
   position: absolute;
   bottom: calc(var(--nav-height) + 20px);
@@ -333,4 +336,22 @@ label{
   width: 55px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+}
+.section__container{
+  background-color: var(--black-100);
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+/* Back */
+.back__navigate{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+.back__navigate svg{
+  height: 30px;
+  margin-right: 8px;
 }

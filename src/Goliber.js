@@ -5,7 +5,6 @@ import { login } from './actions/auth';
 import { PrivateRouter } from './routes/PrivateRouter';
 import { AuthRouter } from './routes/AuthRouter';
 import { Navbar } from './components/shared/Navbar';
-import { NewSpendModal } from './components/spend/NewSpendModal';
 import { Loader } from './components/shared/Loader';
 import { authMe } from './helpers/auth-helper';
 import { finishLoading, startLoading } from './actions/ui';
@@ -49,13 +48,12 @@ export const Goliber = () => {
                     uid
                     ?   
                         <>
-                            <NewSpendModal />
-                            <Navbar />
                             <Topbar />
-                            <AddRegisterButton />
                             <div className='main__container container-fluid'>
                                 <PrivateRouter />
                             </div>
+                            <AddRegisterButton />
+                            <Navbar />
                         </>
                     :   
                         <AuthRouter />
